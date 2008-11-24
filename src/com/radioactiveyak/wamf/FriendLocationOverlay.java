@@ -44,10 +44,10 @@ public class FriendLocationOverlay extends Overlay {
 	public void setLocation(Location location) {
 	  this.location = location;
 		
-      Double latitude = location.getLatitude()*1E6;
-      Double longitude = location.getLongitude()*1E6;
+    Double latitude = location.getLatitude()*1E6;
+    Double longitude = location.getLongitude()*1E6;
     
-      locationPoint = new GeoPoint(latitude.intValue(),longitude.intValue());      
+    locationPoint = new GeoPoint(latitude.intValue(),longitude.intValue());      
 	}  
     
 	/** Refresh the locations of each of the contacts */
@@ -79,7 +79,6 @@ public class FriendLocationOverlay extends Overlay {
   
   @Override
   public void draw(Canvas canvas, MapView mapView, boolean shadow) {	  
-
     // Get the map projection to convert lat/long to screen coordinates
     Projection projection = mapView.getProjection();
     

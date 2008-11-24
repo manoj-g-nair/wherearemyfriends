@@ -178,7 +178,10 @@ public class WhereAreMyFriends extends Activity {
 
     // Register the LocationListener to listen for location changes
     // using the provider found above.
-    locationManager.requestLocationUpdates(provider, 2000, 10, locationListener);
+    locationManager.requestLocationUpdates(provider, 
+                                           60000, // 1min
+                                           1000,  // 1km 
+    	                                     locationListener);
   }
   
   @Override 
